@@ -1,0 +1,124 @@
+:root {
+    --global-width: 40rem;
+}
+
+@media screen and (max-width: 400px) {
+    :root {
+        --global-width: 20rem;   
+    }
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(255, 252, 202, 0.2);
+}
+
+.main {
+    width: var(--global-width);
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    font-size: 50px;
+    background: linear-gradient(to right, #0a0, #020);
+    background-clip: text;
+    color: transparent;
+    animation: fadeIn 0.5s;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+p {
+    text-align: justify;
+}
+
+a, a:hover, a:active, a:visited {
+    color: green
+}
+
+.title-image {
+    height: var(--global-width);
+    width: var(--global-width);
+    margin: auto;
+    display: block;
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 2rem #888;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 3rem;
+}
+
+.title-image:hover {
+    transform: scale(1.05);
+}
+
+.article-image {
+    margin-bottom: 2rem;
+}
+
+.article-image > img {
+    margin:auto;
+    display: block;
+    height: var(--global-width);
+    width: var(--global-width);
+    object-fit: cover;
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0rem 2rem #888;
+    transition: 0.5s ease-in-out;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.article-image > img:hover {
+    transform: scale(1.05);
+}
+
+.flex-img-container {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.flex-img {
+    margin: 1rem;
+    width: calc(var(--global-width)/2);
+    border-radius: 1rem;
+    box-shadow: 0.5rem 0.5rem 2rem #888;
+    transition: 0.5s ease-in-out;
+    margin-bottom: 2rem;
+}
+
+.flex-img:hover {
+    transform: scale(1.1);
+}
+
+article > ol > li {
+    padding: 0.3rem;
+}
+
+article > ul > li {
+    padding: 0.3rem;
+}
+
+.flex-list {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-list > ul > li {
+    padding: 0.5rem;
+}
+
+#finale {
+    margin-bottom: 2rem;
+}
+
+.credits {
+    color: #888;
+    font-style: italic;
+    font-size: small;
+}
